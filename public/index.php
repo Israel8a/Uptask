@@ -25,7 +25,7 @@ $router->get("/mensaje",[LoginController::class,"mensaje"]);
 $router->get("/confirmar",[LoginController::class,"confirmar"]);
 
 
-//Zona Proyectos
+//Zona Proyectos 
 $router->get("/dashboard",[DashboardController::class,"index"]);
 $router->get("/crear-proyecto",[DashboardController::class,"crear_proyecto"]);
 $router->post("/crear-proyecto",[DashboardController::class,"crear_proyecto"]);

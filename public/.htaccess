@@ -1,4 +1,5 @@
-Options -MultiViews
+<IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^ index.php [QSA,L]
+RewriteCond %{REQUEST_URI} !^ public
+RewriteRule ^(.*)$ public/$1 [L]
+<IfModule>
