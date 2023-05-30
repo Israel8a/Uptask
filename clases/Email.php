@@ -30,7 +30,7 @@ class Email{
 
         $contenido ="<html>";
         $contenido.="<p><strong>Hola ".$this->nombre."</strong>  Has creado tu cuenta en UpTask, solo debes confirmarla presionando el siguiente enlace</p>";
-        $contenido.="<p>Presione aqui: <a href='http://localhost:3000/confirmar?token=".$this->token."'>Confirmar Cuenta</p></a>";
+        $contenido.="<p>Presione aqui: <a href='https://uptaskk.herokuapp.com/confirmar?token=".$this->token."'>Confirmar Cuenta</p></a>";
         $contenido.="<p>Si tu no solicitaste esta cuenta, puedes ignorar el mensaje</p>";
         $contenido.="</html>";
         $email->Body = $contenido;
@@ -54,7 +54,7 @@ class Email{
 
         $contenido ="<html>";
         $contenido.="<p><strong>Hola ".$this->nombre."</strong> Has solicitado reestablecer tu password, sigue el enlace para hacerlo</p>";
-        $contenido.="<p>Presione aqui: <a href='http://localhost:3000/reestablecer?token=".$this->token."'>Reestablecer Password</p></a>";
+        $contenido.="<p>Presione aqui: <a href='https://uptaskk.herokuapp.com/reestablecer?token=".$this->token."'>Reestablecer Password</p></a>";
         $contenido.="<p>Si tu no solicitaste esta cuenta, puedes ignorar el mensaje</p>";
         $contenido.="</html>";
         //agregar el contenido a email
