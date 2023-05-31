@@ -12,7 +12,7 @@ class TareaController{
         $proyecto = Proyecto::where("url",$proyectoId);
         session_start();
         if(!$proyecto||$proyecto->propietarioId!==$_SESSION["id"])header("Location: /404");
-        $tareas = Tarea::belongsTo("proyectoId",$proyecto->propietarioId);
+        $tareas = Tarea::belongsTo("proyectoId",$proyecto->id);
         echo json_encode(["tareas"=>$tareas]);
     }
     public static function crear(){
